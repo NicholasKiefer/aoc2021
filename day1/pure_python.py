@@ -7,8 +7,15 @@ def calc(depth):
     return ret
 
 
+def calc_sliding(depth):
+    sum_depth = [depth[i] + depth[i-1] + depth[i-2] for i in range(2, len(depth))]
+    ret = sum([sum_depth[i] > sum_depth[i-1] for i in range(len(sum_depth))])
+    return ret
+
+
 if __name__ == "__main__":
     with open("data.txt", "r") as file:
         d = file.read().splitlines()
     d = [int(i) for i in d]
     print(calc(d))
+    print(calc_sliding(d))
