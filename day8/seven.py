@@ -53,6 +53,3 @@ if __name__ == "__main__":
         d = file.read().splitlines()
     print(unique(d))
     print(decode_for_real(d))
-
-# 1065038 too low
-# 1070957
