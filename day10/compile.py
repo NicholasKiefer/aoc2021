@@ -27,7 +27,6 @@ def corrupt(data):
     _, data = find_illegal(data)
     closed = {"(": 1, "[": 2, "{": 3, "<": 4}
     scores = []
-    ret_lines = []
     for line in data:
         bras = []
         score = []
